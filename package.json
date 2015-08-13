@@ -1,6 +1,6 @@
 {
   "name": "xet",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "map::xet( key, factory ) // => If map doesn't have key, set it to the return value of factory. Return value.",
   "main": "xet.js",
   "scripts": {
