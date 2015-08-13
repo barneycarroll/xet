@@ -1,0 +1,28 @@
+{
+  "name": "xet",
+  "version": "0.0.1",
+  "description": "map::xet( key, factory ) // => If map doesn't have key, set it to the return value of factory. Return value.",
+  "main": "xet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barneycarroll/xet.git"
+  },
+  "keywords": [
+    "memoization",
+    "convenience",
+    "utility",
+    "map",
+    "method",
+    "get",
+    "set"
+  ],
+  "author": "barney.carroll@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barneycarroll/xet/issues"
+  },
+  "homepage": "https://github.com/barneycarroll/xet#readme"
+}
