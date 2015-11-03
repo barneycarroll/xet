@@ -1,15 +1,13 @@
-# xet
+`xet` (pronounced **ʃɛt**) retrieves a map's value for a given key, setting it with a provided factory if it isn't present.
 
-> Designed for use with ES6 [Maps](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Map), and accordingly written in ES6. Recommend importing via [Babel](https://babeljs.io).
+This is especially useful when you're writing in a declarative dialect - vritual DOM view templates for example - and want to tersely express setup logic without breaking stride.
 
-xet is (sometimes set, and then) get.
+`xet` is written as a method for maps (weak or otherwise), and benefits from the ES7 bind operator:
 
-```javascript
-map::xet( key, factory ) // => value
+```es7
+// ES6
+xet.call( map, 'foo', () => 'bar' )
+
+// ES7
+map::xet( 'foo', () => 'bar' )
 ```
-
-* If `map` doesn't have `key`, execute `factory` and set its return as `key`'s `value`. 
-* Return `value`.
-
-Like function memoization based on input, except the cache is part of your application logic.
-
