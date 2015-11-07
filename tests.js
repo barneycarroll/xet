@@ -1,5 +1,5 @@
 import test from 'tape'
-import give from './xet.min'
+import give from './xet'
 
 test(
 	"When called on a Map without an entry for the supplied key",
