@@ -1,5 +1,5 @@
-import test from 'tape'
-import give from './xet'
+const test = require( 'tape' )
+const give = require( './xet' )
 
 test(
 	"When called on a Map without an entry for the supplied key",
@@ -11,7 +11,7 @@ test(
 			assert => {
 				const map = new Map()
 
-				map::give( 'foo', () => 'bar' )
+				give( map, 'foo', () => 'bar' )
 
 				assert.equals( map.get( 'foo' ), 'bar' )
 
@@ -24,7 +24,7 @@ test(
 
 			assert => {
 				assert.equals(
-					new Map()::give( 'foo', () => 'bar' ),
+					give( new Map(), 'foo', () => 'bar' ),
 
 					'bar'
 				)
@@ -47,7 +47,7 @@ test(
 			assert => {
 				let executed = false
 
-				map::give( 'foo', () => executed = true )
+				give( map, 'foo', () => executed = true )
 
 				assert.equals( executed, false )
 
@@ -60,7 +60,7 @@ test(
 
 			assert => {
 				assert.equals(
-					map::give( 'foo', () => 'baz' ),
+					give( map, 'foo', () => 'baz' ),
 
 					'bar'
 				)
