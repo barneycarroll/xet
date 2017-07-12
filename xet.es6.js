@@ -1,6 +1,6 @@
-export default function xet( key, factory ){
-	if( !this.has( key ) )
-		this.set( key, factory() )
+export default ( map, key, factory ){
+	if( !map.has( key ) )
+		map.set( key, factory() )
 
-	return this.get( key )
+	return map.get( key )
 }

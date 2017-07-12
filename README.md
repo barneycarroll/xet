@@ -4,12 +4,6 @@
 
 This is especially useful when you're writing in a declarative dialect - vritual DOM view templates for example - and want to tersely express setup logic without breaking stride.
 
-`xet` is written as a method for maps (weak or otherwise), and benefits from the ES7 bind operator:
-
-```es7
-// ES6
-xet.call( map, 'foo', () => 'bar' )
-
-// ES7
-map::xet( 'foo', () => 'bar' )
+```js
+xet( map, 'foo', () => 'bar' )
 ```
