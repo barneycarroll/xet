@@ -1,8 +1,9 @@
 {
   "name": "xet",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "xet( map, key, factory ) // => If map doesn't have key, set it to the return value of factory. Return value.",
   "jsnext:main": "xet.es6.js",
+  "module": "xet.es6.js",
   "main": "xet.js",
   "scripts": {
     "prepublish": "npm run test",
