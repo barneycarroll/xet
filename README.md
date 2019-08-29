@@ -8,4 +8,4 @@ xet( map, key, factory )
 const factory = () => value
 ```
 
-This is useful when writing in a point-free declarative dialect - vritual DOM view templates for example - and want to write functions that can conditionally run setup in the form of the factory.
+This is useful when writing in a point-free declarative dialect - virtual DOM view templates for example - and want to write functions that can conditionally run setup in the form of the factory.
