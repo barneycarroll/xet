@@ -1,6 +1,6 @@
 {
   "name": "xet",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "xet( map, key, factory ) // => If map doesn't have key, set it to the return value of factory. Return value.",
   "module": "module.js",
   "main": "script.js",

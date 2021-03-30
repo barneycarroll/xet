@@ -15,15 +15,20 @@ formats.forEach(give => {
   
     assert => {
       assert.test(
-        "assigns the output of the supplied factory to that key",
-  
+        "assigns the output of the supplied factory to that key, with key and Map supplied to factory",
+
         assert => {
           const map = new Map()
-  
-          give( map, 'foo', () => 'bar' )
-  
-          assert.equals( map.get( 'foo' ), 'bar' )
-  
+
+          give(map, 'foo', (x, y) => {
+            assert.equal(x, 'foo')
+            assert.equal(y, map)
+
+            return 'bar'
+          })
+
+          assert.equals(map.get('foo'), 'bar')
+
           assert.end()
         }
       )

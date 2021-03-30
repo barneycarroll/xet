@@ -5,7 +5,7 @@
 ```js
 xet( map, key, factory )
 // where
-const factory = () => value
+const factory = (key, value) => value
 ```
 
 This is useful when writing in a point-free declarative dialect - virtual DOM view templates for example - and want to write functions that can conditionally run setup in the form of the factory.
